@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="YADHU // Deep Space Universe — Continuous Full-Viewport Sci-Fi Experience with 3 Seamless Canvas Animations (k2 -> k3 -> k1), Sci-Fi Imagery, 11 AI Portals & Access Matrix."
+  />
+  <title>YADHU // Welcome to My Universe</title>
+
+  <!-- Google Fonts: Orbitron, Rajdhani, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Preload opening frames from k2, k3, and k1 for instant zero-lag start -->
+  <link rel="preload" as="image" href="assets/k2/ezgif-frame-001.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/k3/ezgif-frame-001.webp" type="image/webp" />
+  <link rel="preload" as="image" href="assets/k1/ezgif-frame-001.webp" type="image/webp" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- =========================================================================
+       1. FULL-VIEWPORT CONTINUOUS CANVAS SEQUENCE
+       Fills 100% of the screen throughout the website!
+       k2 (Hero) -> k3 (Details) -> k1 (Singularity) with zero gaps!
+       ========================================================================= -->
+  <canvas id="master-bg-canvas" width="1280" height="720" aria-hidden="true"></canvas>
+
+  <!-- Cosmic Particle Canvas & Scanlines Overlay -->
+  <canvas id="cosmos-canvas" aria-hidden="true"></canvas>
+  <div class="global-vignette" aria-hidden="true"></div>
+  <div class="hud-scanlines" aria-hidden="true"></div>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="warp-progress-track" aria-hidden="true">
+    <div class="warp-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Viewfinder Reticles -->
+  <div class="hud-viewfinder" aria-hidden="true">
+    <span class="hud-corner hc-tl"></span>
+    <span class="hud-corner hc-tr"></span>
+    <span class="hud-corner hc-bl"></span>
+    <span class="hud-corner hc-br"></span>
+  </div>
+
+  <!-- Floating Bottom Sequence HUD Rail -->
+  <aside class="floating-sequence-dock" aria-label="Sequence Telemetry">
+    <div>
+      <span class="hud-dot-live"></span>
+      <span id="dock-frame-readout">FRAME 001/240</span>
+    </div>
+
+    <div class="seq-jump-buttons">
+      <button type="button" class="seq-btn is-active" id="btn-seq-0" data-seq="0">01 · HERO (K2)</button>
+      <button type="button" class="seq-btn" id="btn-seq-1" data-seq="1">02 · 3D PORTALS (K3)</button>
+      <button type="button" class="seq-btn" id="btn-seq-2" data-seq="2">03 · TRANSMISSION &amp; ACCESS (K1)</button>
+    </div>
+
+    <div class="drag-controller-badge">
+      <span>‹ DRAG / SCROLL TO TRAVERSE ›</span>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. FLOATING HOLOGRAPHIC NAVBAR (APPLE-TIER SCI-FI LUXURY DOCK)
+       ========================================================================= -->
+  <header class="floating-header" id="top">
+    <nav class="holo-dock" aria-label="Main Navigation">
+      <a href="#hero" class="dock-brand" aria-label="Yadhu Home">
+        <span class="brand-reactor" aria-hidden="true"></span>
+        <span>YADHU</span>
+        <span class="dock-tag">EDITION 01</span>
+      </a>
+
+      <ul class="dock-links" id="dock-links-list">
+        <li><a href="#hero" class="dock-link active">Home</a></li>
+        <li><a href="#portals" class="dock-link">AI Portals (3D)</a></li>
+        <li><a href="#details" class="dock-link">Transmission</a></li>
+        <li><a href="#pricing" class="dock-link">Pricing</a></li>
+        <li><a href="#contact" class="dock-link">Contact</a></li>
+      </ul>
+
+      <div class="dock-actions">
+        <button type="button" class="dock-sound-btn" id="audio-toggle-btn" aria-label="Toggle Sci-Fi Audio FX">
+          <span class="sound-bars" aria-hidden="true">
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+            <span class="sound-bar"></span>
+          </span>
+          <span id="sound-label">AUDIO: OFF</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- =========================================================================
+       3. CONTINUOUS CONTENT TRACK (FLOWS DIRECTLY OVER THE ANIMATION)
+       ========================================================================= -->
+  <main class="content-over-canvas" id="main-content">
+
+    <!-- =======================================================================
+         STAGE 1: HERO (DRIVEN BY K2 ANIMATION)
+         STRICT REQUIREMENT: ZERO BUTTONS ON HERO SECTION!
+         ======================================================================= -->
+    <section id="hero" class="stage-hero" aria-label="Hero Section">
+      <div class="container">
+        <div class="hero-eyebrow">
+          <span class="hud-dot-live"></span>
+          <span>ORIGIN // YADHU · FIRST WEBSITE EDITION</span>
+          <span class="telemetry-sep">·</span>
+          <span class="status-indicator">SYSTEM ONLINE</span>
+        </div>
+
+        <h1 class="hero-title">
+          Welcome to<br />
+          <span class="neon-gradient-text">My Universe</span>
+        </h1>
+
+        <p class="hero-sub">
+          This is Yadhu’s first website—the beginning of a journey into deep space, creative engineering, and artificial intelligence.
+        </p>
+
+        <div class="hero-telemetry-strip" aria-hidden="true">
+          <span>[ TELEMETRY: 37°46'N 122°25'W</span>
+          <span class="telemetry-sep">·</span>
+          <span>SECTOR 01 // DEEP SPACE</span>
+          <span class="telemetry-sep">·</span>
+          <span>DILATION: 1.000x // QUANTUM: STABLE ]</span>
+        </div>
+
+        <div class="hero-drag-prompt" aria-hidden="true">
+          <span class="prompt-accent">‹</span>
+          <span>DRAG OR SCROLL TO TRAVERSE THE UNIVERSE</span>
+          <span class="prompt-accent">›</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         STAGE 2: THE 11 AI PORTALS & 3D DNA HELIX (DRIVEN BY K3 SWORD ANIMATION)
+         The 11 app sites rotate 360° vertically around the central Breach Blade sword
+         like a DNA double-helix snake winding from top to bottom!
+         Stationary crisp icons (no rotation), interactive drag, zero lag!
+         ======================================================================= -->
+    <section id="portals" class="stage-portals" aria-label="AI Tools & Cybernetics Portals">
+      <div class="container">
+        <div class="sector-header">
+          <span class="sector-badge">
+            <span class="badge-dot"></span>
+            SECTOR 02 // 11 ACTIVE DEEP SPACE PORTALS
+          </span>
+          <h2 class="sector-title">AI &amp; Cybernetics Matrix</h2>
+          <p class="sector-sub">Smooth 360° 3D vertical orbit surrounding the Quantum Neon Violet Blade</p>
+        </div>
+
+        <!-- Filter, 3D Orbit Controls & Search -->
+        <div class="tools-filter-bar">
+          <div class="filter-pills" role="tablist" aria-label="AI Tools Filter">
+            <button type="button" class="filter-btn active" data-filter="all">ALL (11)</button>
+            <button type="button" class="filter-btn" data-filter="ai">AI (4)</button>
+            <button type="button" class="filter-btn" data-filter="media">MEDIA (3)</button>
+            <button type="button" class="filter-btn" data-filter="privacy">PRIVACY (4)</button>
+          </div>
+
+          <!-- 3D Sword Orbit Controls & Telemetry -->
+          <div class="orbit-view-controls">
+            <div class="orbit-telemetry-pill">
+              <span class="hud-dot-live"></span>
+              <span>SWORD ORBIT: <strong id="orbit-angle-val">000°</strong></span>
+              <span class="telemetry-sep">·</span>
+              <span id="orbit-node-name" class="active-node-text">CrackOne Inbox</span>
+            </div>
+
+            <div class="carousel-btn-group">
+              <button type="button" class="ctrl-nav-btn" id="btn-orbit-prev" title="Previous Node">▲ PREV</button>
+              <button type="button" class="ctrl-nav-btn" id="btn-orbit-next" title="Next Node">▼ NEXT</button>
+              <button type="button" class="ctrl-nav-btn" id="btn-orbit-spin" title="Toggle Auto Rotation">AUTO-SPIN: ON</button>
+              <div class="mode-btn-group">
+                <button type="button" class="ctrl-mode-btn active" id="btn-mode-helix" title="3D Sword Orbit">3D SWORD ORBIT</button>
+                <button type="button" class="ctrl-mode-btn" id="btn-mode-grid" title="Matrix Grid">GRID</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tools-search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="tools-search-input" placeholder="Search portal..." aria-label="Search AI Tools" />
+          </div>
+        </div>
+
+        <!-- 3D HELICAL SWORD VIEWPORT (11 APP SITES ROTATING 360° AROUND THIS SWORD IN 3D) -->
+        <div class="dna-helix-viewport" id="dna-helix-viewport" aria-label="3D Vertical Helical Orbit Matrix">
+          <!-- Central 3D Quantum Neon Violet Sword -->
+          <div class="central-sword-wrapper" id="central-sword-wrapper" aria-hidden="true">
+            <div class="sword-aura-glow"></div>
+            <img src="assets/violet_sword_cutout.png" alt="Quantum Neon Violet Sword" class="central-sword-img" id="central-sword-img" />
+            <div class="sword-ripple-base"></div>
+          </div>
+
+          <!-- 3D Cards Container (Cards dynamically rotate in 3D around the sword in 360°) -->
+          <div class="dna-cards-container" id="dna-cards-container">
+            <!-- Populated dynamically by script.js with all 11 app site capsules -->
+          </div>
+
+          <div class="dna-guide-pill" aria-hidden="true">
+            <span>‹ DRAG OR SCROLL TO ROTATE 360° AROUND THIS SWORD ›</span>
+          </div>
+        </div>
+
+        <!-- Rendered Dynamic Grid (Alternate view) -->
+        <div class="tools-grid is-hidden" id="tools-grid-container" aria-live="polite">
+          <!-- Populated by script.js from the clean AI_TOOLS config array -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         STAGE 3: DETAILS & TRANSMISSION (DRIVEN BY K1 ANIMATION)
+         Smooth seamless transition directly from k3, NO space between animations!
+         Includes Sci-Fi Images & Personal Welcome Letter from Yadhu!
+         ======================================================================= -->
+    <section id="details" class="stage-details" aria-label="System Details & Transmission">
+      <div class="container">
+        <div class="sector-header">
+          <span class="sector-badge">
+            <span class="badge-dot"></span>
+            SECTOR 03 // ARCHITECTURE &amp; TRANSMISSION
+          </span>
+          <h2 class="sector-title">System Architecture</h2>
+          <p class="sector-sub">Quantum compute diagnostics, decrypted transmission, and inaugural mission log</p>
+        </div>
+
+        <!-- 2-Column Showcase with Sci-Fi Imagery & Personal Letter -->
+        <div class="details-grid-showcase">
+          <!-- Left: Sci-Fi Visual Terminal with Artwork Image -->
+          <div class="scifi-image-card">
+            <img src="assets/images/scifi_portal.jpg" alt="Sci-Fi Holographic Command Portal" loading="lazy" />
+            <div class="scifi-image-overlay"></div>
+            <div class="scifi-image-content">
+              <span class="scifi-image-tag">[ NODE_01 // QUANTUM_CORE ]</span>
+              <h3 class="scifi-image-title">Sub-Atomic Neural Matrix</h3>
+              <p class="scifi-image-desc">
+                High-density distributed compute node routing multimodal inference across interplanetary distances with 0.18ms latency.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Welcome Transmission from Yadhu -->
+          <div class="glass-panel transmission-terminal">
+            <div>
+              <div class="term-header">
+                <div class="term-dots"><i></i><i></i><i></i></div>
+                <span>TERMINAL // YADHU_COMM_V1.0</span>
+                <span class="cyan-text">SIGNAL: 100%</span>
+              </div>
+
+              <div class="transmission-body">
+                <p style="color: var(--neon-cyan); font-weight: 700; font-family: var(--font-heading);">
+                  Greetings, Traveler —
+                </p>
+                <p>
+                  I'm <strong>Yadhu</strong>, and welcome to my very first website.
+                </p>
+                <p>
+                  I built this sci-fi universe to combine my passion for futuristic aesthetics and next-generation artificial intelligence. This is the start of an ongoing journey to push creative web design to new frontiers.
+                </p>
+                <p>
+                  Thank you for visiting my universe! Explore the neural portals, test the tools, and enjoy the voyage into deep space.
+                </p>
+              </div>
+            </div>
+
+            <div class="transmission-signoff">
+              <div>
+                <div class="signoff-name">— Yadhu</div>
+                <div class="signoff-sub">Creator · First Website Edition</div>
+              </div>
+              <span class="dock-tag">AUTHENTICATED // 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mission Log (3 Goals) -->
+        <div class="mission-strip">
+          <div class="glass-panel mission-card">
+            <span class="m-badge">GOAL 01 // LEARN</span>
+            <h3 class="m-title">Master Deep AI &amp; Web Mechanics</h3>
+            <p class="m-desc">Immerse into cutting-edge neural architectures, web graphics, shaders, and front-end physics.</p>
+          </div>
+
+          <div class="glass-panel mission-card">
+            <span class="m-badge">GOAL 02 // BUILD</span>
+            <h3 class="m-title">Engineer Sci-Fi Software</h3>
+            <p class="m-desc">Create hyper-smooth, responsive digital tools that unite bold sci-fi aesthetics with real utility.</p>
+          </div>
+
+          <div class="glass-panel mission-card">
+            <span class="m-badge">GOAL 03 // SHARE</span>
+            <h3 class="m-title">Empower Fellow Creators</h3>
+            <p class="m-desc">Share open resources and curated tool matrices freely with creators across the galaxy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         STAGE 4: PRICING MATRIX, CONTACT & FOOTER (SINGULARITY CULMINATION)
+         "and at end (annimation can be of folder k1) and then price"
+         ======================================================================= -->
+    <section id="pricing" class="stage-pricing-contact" aria-label="Access Matrix & Contact">
+      <div class="container">
+        <div class="sector-header">
+          <span class="sector-badge">
+            <span class="badge-dot"></span>
+            SECTOR 04 // ACCESS CLEARANCE
+          </span>
+          <h2 class="sector-title">Clearance Authorization</h2>
+          <p class="sector-sub">Choose your interstellar pass level for uninterrupted neural bandwidth</p>
+        </div>
+
+        <!-- Billing Toggle -->
+        <div class="pricing-billing-toggle">
+          <span>STANDARD ORBIT</span>
+          <div class="toggle-switch" id="billing-toggle" role="switch" aria-checked="false" tabindex="0" aria-label="Toggle Annual Billing">
+            <div class="toggle-knob"></div>
+          </div>
+          <span>WARP PASS <strong class="cyan-text">(SAVE 20%)</strong></span>
+        </div>
+
+        <!-- Pricing Grid -->
+        <div class="pricing-grid">
+          <!-- Tier 1: Scout Pass -->
+          <div class="glass-panel price-card">
+            <div>
+              <span class="tier-tag">LEVEL 01 // CITIZEN</span>
+              <h3 class="tier-name">Scout Pass</h3>
+              <div class="tier-price-wrap">
+                <span class="tier-price" data-monthly="$0" data-annual="$0">$0</span>
+                <span class="tier-cycle">/ FOREVER</span>
+              </div>
+              <p class="tier-summary">Essential clearance for travelers beginning their voyage across space.</p>
+            </div>
+
+            <ul class="tier-features">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Full access to all 11 AI Portals</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Standard relay bandwidth</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>50 Daily synthesis queries</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn-tier" onclick="handleTierSelect('Scout Pass')">INITIALIZE FREE</button>
+          </div>
+
+          <!-- Tier 2: Vanguard Pilot (Featured) -->
+          <div class="glass-panel price-card featured-tier">
+            <span class="featured-badge">RECOMMENDED PASS</span>
+            <div>
+              <span class="tier-tag">LEVEL 02 // VANGUARD</span>
+              <h3 class="tier-name">Vanguard Pilot</h3>
+              <div class="tier-price-wrap">
+                <span class="tier-price price-val" data-monthly="$19" data-annual="$15">$19</span>
+                <span class="tier-cycle">/ ORBIT CYCLE</span>
+              </div>
+              <p class="tier-summary">High-bandwidth clearance for power creators seeking unthrottled generation.</p>
+            </div>
+
+            <ul class="tier-features">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Everything in Scout Pass</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Priority quantum routing (0.12ms)</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Unlimited neural audio &amp; image forge</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated anonymous relay channels</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn-tier" onclick="handleTierSelect('Vanguard Pilot')">CLAIM VANGUARD</button>
+          </div>
+
+          <!-- Tier 3: Warp Architect -->
+          <div class="glass-panel price-card">
+            <div>
+              <span class="tier-tag">LEVEL 03 // ARCHITECT</span>
+              <h3 class="tier-name">Warp Architect</h3>
+              <div class="tier-price-wrap">
+                <span class="tier-price price-val" data-monthly="$49" data-annual="$39">$49</span>
+                <span class="tier-cycle">/ ORBIT CYCLE</span>
+              </div>
+              <p class="tier-summary">Complete root godmode authority with private dedicated cluster pipelines.</p>
+            </div>
+
+            <ul class="tier-features">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Everything in Vanguard Pilot</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Dedicated GPU cluster core allocation</span>
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Direct encrypted uplink to Yadhu</span>
+              </li>
+            </ul>
+
+            <button type="button" class="btn-tier" onclick="handleTierSelect('Warp Architect')">UNLOCK ROOT ACCESS</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         STAGE 5: TRANSMISSION UPLINK & CONTACT
+         ======================================================================= -->
+    <section id="contact" class="stage-contact" aria-label="Establish Contact With Yadhu">
+      <div class="container">
+        <div class="sector-header" style="margin-bottom: 24px;">
+          <span class="sector-badge">
+            <span class="badge-dot"></span>
+            SECTOR 05 // TRANSMISSION UPLINK
+          </span>
+          <h2 class="sector-title">Establish Contact</h2>
+          <p class="sector-sub">Send a message across the sub-space frequency or connect on social hubs</p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px;">
+              Whether you want to discuss AI, collaborate on futuristic projects, share feedback on Yadhu’s first website, or simply say hello across the void—the antenna is calibrated.
+            </p>
+
+            <div class="social-pills">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>GITHUB</span>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                </svg>
+                <span>X / TWITTER</span>
+              </a>
+              <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 6h0a14.5 14.5 0 0 0-4-1.5 9.6 9.6 0 0 0-.4 1 14 14 0 0 0-3.2 0 9.6 9.6 0 0 0-.4-1A14.5 14.5 0 0 0 6 6c-2.5 3.8-3.2 7.6-3 11.3a14.8 14.8 0 0 0 4.5 2.3c.4-.5.7-1.1 1-1.7-.5-.2-1-.5-1.5-.8.1-.1.2-.2.3-.3 3 1.4 6.2 1.4 9.2 0 .1.1.2.2.3.3-.5.3-1 .6-1.5.8.3.6.6 1.2 1 1.7a14.8 14.8 0 0 0 4.5-2.3c.3-4.3-.8-8.1-3-11.3zM8.5 15.5c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm7 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"></path>
+                </svg>
+                <span>DISCORD</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="glass-panel c-form-card">
+            <form id="contact-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-row">
+                <label for="contact-name" class="f-label">CALL SIGN / NAME</label>
+                <input type="text" id="contact-name" class="f-input" placeholder="e.g. Commander Sarah" required />
+              </div>
+
+              <div class="form-row">
+                <label for="contact-email" class="f-label">FREQUENCY / EMAIL</label>
+                <input type="email" id="contact-email" class="f-input" placeholder="e.g. pilot@interstellar.net" required />
+              </div>
+
+              <div class="form-row">
+                <label for="contact-message" class="f-label">ENCRYPTED MESSAGE</label>
+                <textarea id="contact-message" class="f-textarea" placeholder="Transmit your thoughts or inquiries to Yadhu..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-transmit" id="btn-submit-comm">TRANSMIT PACKET</button>
+              <div id="contact-status" class="status-box" role="status"></div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="footer-row">
+            <div style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-weight: 800; color: #ffffff;">
+              <span class="brand-reactor" aria-hidden="true"></span>
+              <span>YADHU</span>
+            </div>
+
+            <div class="footer-copy">
+              Built by Yadhu · My first sci-fi website · © 2026
+            </div>
+
+            <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--neon-cyan);">
+              COORDINATES: DEEP SPACE
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
